@@ -122,14 +122,14 @@ dialog[open]{animation:pop .3s}dialog[open]::backdrop{animation:fd .3s}@keyframe
 <header><div class="wrap bar">
 <a href="#home" class="logo"><svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#183629"/><path d="M20 18h24v6H27v6h14v6H27v6h17v6H20z" fill="#F5F2EA"/><circle cx="48" cy="46" r="4" fill="#C77C4A"/></svg>ProjectESEMKA</a>
 <button class="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="nav"><i></i><i></i></button>
-<nav id="nav" aria-label="Navigasi utama"><a href="#home">Home</a><a href="#tentang">Tentang Saya</a><a href="#layanan">Layanan</a><a href="#portfolio">Portfolio</a><a href="#teknologi">Teknologi</a><a href="#proses">Proses Kerja</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a><a class="btn sm" data-wa="">Konsultasi Proyek</a></nav>
+<nav id="nav" aria-label="Navigasi utama"><a href="#home">Home</a><a href="#tentang">Tentang Saya</a><a href="#layanan">Layanan</a><a href="#Portofolio">Portofolio</a><a href="#teknologi">Teknologi</a><a href="#proses">Proses Kerja</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a><a class="btn sm" data-wa="">Konsultasi Proyek</a></nav>
 </div></header>
 <main>
 <section id="home" class="hero"><div class="wrap hg">
 <div class="ht"><p class="eyebrow"><i></i>Independent Web Developer</p><h1>Website Profesional, Dibangun dari <em>Ide dan Kreativitas.</em></h1>
 <p class="typ">Saya membuat <span id="tw"></span><i class="caret"></i></p>
 <p class="lead">Saya membantu bisnis, UMKM, dan individu membangun kehadiran digital melalui website yang modern, responsif, dan sesuai kebutuhan.</p>
-<div class="acts"><a class="btn" href="#portfolio">Jelajahi Portofolio</a><a class="btn ghost" data-wa="">Konsultasi via WhatsApp</a></div></div>
+<div class="acts"><a class="btn" href="#Portofolio">Jelajahi Portofolio</a><a class="btn ghost" data-wa="">Konsultasi via WhatsApp</a></div></div>
 <div class="bw" aria-hidden="true"><div class="bb"><i></i><i></i><i></i><span>myesemka.vercel.app</span></div><div class="bd"><div class="sd"></div><div class="mn"><b></b><div class="rw"><u></u><u></u><u></u></div><div class="ch"></div></div></div></div>
 </div></section>
 <section class="stats"><div class="wrap"><div><b data-n="4">4</b><span>Proyek</span></div><div><b data-n="10" id="nS">10</b><span>Jenis Layanan</span></div><div><b data-n="3" id="nK">3</b><span>Paket</span></div><div><b data-n="100" data-s="%">100%</b><span>Responsif</span></div></div></section>
@@ -144,7 +144,7 @@ dialog[open]{animation:pop .3s}dialog[open]::backdrop{animation:fd .3s}@keyframe
 </div></section>
 
 <section id="layanan" class="sec"><div class="wrap rv"><h2>Layanan</h2><p class="sub">Pilih yang paling dekat dengan kebutuhan Anda, atau ceritakan kebutuhan khusus Anda.</p><div class="grid g3" id="services"></div></div></section>
-<section id="portfolio" class="sec dk"><div class="wrap rv"><h2>Portfolio</h2><p class="sub">Setiap proyek diberi label status agar jelas mana yang sudah online dan mana yang masih dikembangkan.</p><div class="flt" id="filters" role="group" aria-label="Filter portfolio"></div><p class="hint" id="pState" role="status"></p><div class="grid g2" id="projects"></div></div></section>
+<section id="Portofolio" class="sec dk"><div class="wrap rv"><h2>Portofolio</h2><p class="sub">Setiap proyek diberi label status agar jelas mana yang sudah online dan mana yang masih dikembangkan.</p><div class="flt" id="filters" role="group" aria-label="Filter Portofolio"></div><p class="hint" id="pState" role="status"></p><div class="grid g2" id="projects"></div></div></section>
 <section id="teknologi" class="sec"><div class="wrap rv"><h2>Teknologi</h2><p class="sub" id="techNote"></p><div class="grid g2" id="tech"></div></div></section>
 <section id="proses" class="sec alt"><div class="wrap rv"><h2>Proses Kerja</h2><ol class="steps" id="steps"></ol></div></section>
 <section id="paket" class="sec"><div class="wrap rv"><h2>Paket Layanan</h2><p class="sub" id="priceNote"></p><div class="grid g3" id="packages"></div></div></section>
@@ -162,7 +162,7 @@ dialog[open]{animation:pop .3s}dialog[open]::backdrop{animation:fd .3s}@keyframe
 <script>
 /* ============================================================
    CONFIG — SEMUA TEKS & DATA YANG SERING DIEDIT ADA DI SINI
-   Nomor WA, email, IG, layanan, paket, FAQ, portfolio, dll.
+   Nomor WA, email, IG, layanan, paket, FAQ, Portofolio, dll.
    ============================================================ */
 var CONFIG={
   whatsapp:"6289516296893",        // GANTI: format 62xxxxxxxxxx tanpa + / spasi
@@ -229,7 +229,7 @@ document.querySelectorAll("[data-wa]").forEach(function(a){bind(a,C.msgGeneral)}
 C.services.forEach(function(s){var c=el("article","card",null,$("#services"));el("div","ico",s[0].charAt(0),c);el("h3",null,s[0],c);el("p",null,s[1],c);
  var u=el("ul",null,null,c);s[2].forEach(function(f){el("li",null,f,u)});bind(el("a","btn sm","Konsultasi",c),"Halo ProjectESEMKA, saya tertarik dengan layanan "+s[0]+". Bisa kita diskusikan?")});
 
-/* Portfolio */
+/* Portofolio */
 var P=C.projects,cat="Semua",modal=$("#modal");
 function act(p,box){if(p.url){var a=el("a","btn sm","Lihat Website",box);a.href=p.url;a.target="_blank";a.rel="noopener"}else el("a","btn sm","Segera Hadir",box).setAttribute("aria-disabled","true")}
 function draw(){
@@ -248,10 +248,10 @@ function open(p){$("#mT").textContent=p.name;$("#mS").textContent=p.status+" · 
 modal.querySelector(".x").onclick=function(){modal.close()};modal.onclick=function(e){if(e.target===modal)modal.close()};
 filters();draw();
 
-/* Opsional: ambil portfolio dari Supabase (tabel projects, lihat schema.sql). Gagal = tetap pakai data CONFIG. */
+/* Opsional: ambil Portofolio dari Supabase (tabel projects, lihat schema.sql). Gagal = tetap pakai data CONFIG. */
 var SB=C.SUPABASE_URL&&C.SUPABASE_ANON_KEY&&/^https:\/\//.test(C.SUPABASE_URL);
 function sbH(){return{apikey:C.SUPABASE_ANON_KEY,Authorization:"Bearer "+C.SUPABASE_ANON_KEY,"Content-Type":"application/json"}}
-if(SB){$("#pState").textContent="Memuat portfolio…";
+if(SB){$("#pState").textContent="Memuat Portofolio…";
  fetch(C.SUPABASE_URL+"/rest/v1/projects?is_published=eq.true&order=sort_order.asc&select=*",{headers:sbH()}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(rows){
   if(rows.length){P=rows.map(function(r){return{name:r.name,category:r.category||"Lainnya",status:r.status,url:r.url||"",desc:r.description||"",tech:r.tech||[],image:r.image_url||""}});cat="Semua";filters()}draw()})
  .catch(function(){draw();$("#pState").textContent=""})}
@@ -291,7 +291,7 @@ var tt,T=$("#toast");
 function say(m){T.textContent=m;T.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){T.classList.remove("show")},2600)}
 function stagger(){document.querySelectorAll(".grid,.steps").forEach(function(g){[].forEach.call(g.children,function(c,i){c.style.setProperty("--i",i)})})}
 stagger();
-var EY={tentang:"Tentang",layanan:"Layanan",portfolio:"Karya Terpilih",teknologi:"Stack",proses:"Cara Kerja",paket:"Paket",faq:"Tanya Jawab",kontak:"Hubungi Saya"};
+var EY={tentang:"Tentang",layanan:"Layanan",Portofolio:"Karya Terpilih",teknologi:"Stack",proses:"Cara Kerja",paket:"Paket",faq:"Tanya Jawab",kontak:"Hubungi Saya"};
 Object.keys(EY).forEach(function(k){var h=document.querySelector("#"+k+" h2");if(h)h.parentNode.insertBefore(el("span","ey",EY[k]),h)});
 var pg=$("#pg"),hd=$("header");
 function sc(){var m=document.documentElement.scrollHeight-innerHeight;pg.style.width=(m>0?scrollY/m*100:0)+"%";hd.classList.toggle("sc",scrollY>20)}
