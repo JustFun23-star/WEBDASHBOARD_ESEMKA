@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProjectESEMKA — Jasa Pembuatan Website oleh Developer Independen</title>
+<meta name="description" content="Personal web development studio: website profesional, responsif, dan sesuai kebutuhan untuk UMKM, bisnis, dan individu.">
+<link rel="canonical" href="https://GANTI-DOMAIN-ANDA.vercel.app/"><!-- GANTI -->
+<meta property="og:title" content="ProjectESEMKA — Web Development Studio">
+<meta property="og:description" content="Belajar, Berkarya, Membangun Masa Depan Digital.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#101C16">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23183629'/%3E%3Cpath d='M20 18h24v6H27v6h14v6H27v6h17v6H20z' fill='%23F5F2EA'/%3E%3Ccircle cx='48' cy='46' r='4' fill='%23C77C4A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap">
+<style>
+/* ===== WARNA & FONT: ubah di :root ===== */
+:root{--forest:#183629;--dark:#101C16;--cream:#F5F2EA;--soft:#FCFBF7;--orange:#C77C4A;--muted:#858A80;--ink:#1b2a22;--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font:400 1rem/1.65 var(--sans);color:var(--ink);background:var(--soft);overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0 0 .6em}
+h1{font-size:clamp(2.2rem,6vw,4.2rem)}h2{font-size:clamp(1.8rem,4vw,2.8rem)}h3{font-size:1.25rem}
+a{color:inherit}:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}.narrow{max-width:760px}
+header{position:sticky;top:0;z-index:50;background:rgba(16,28,22,.94);backdrop-filter:blur(8px);color:var(--cream)}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:64px}
+.logo{display:flex;gap:10px;align-items:center;text-decoration:none;font:700 1.1rem var(--serif)}
+nav{display:flex;gap:18px;align-items:center;font-size:.92rem}
+nav a:not(.btn){text-decoration:none;color:#cfd3c8;padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+nav a:not(.btn):hover,nav a.on{color:#fff;border-color:var(--orange)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:6px}
+.burger i{display:block;width:24px;height:2px;background:var(--cream)}
+.btn{display:inline-block;background:var(--orange);color:#fff;border:0;padding:14px 24px;border-radius:999px;font:700 .95rem var(--sans);text-decoration:none;cursor:pointer;min-height:44px;text-align:center;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:#b46a3b}.btn.sm{padding:10px 18px;min-height:40px}
+.btn.ghost{background:transparent;border:1.5px solid currentColor}.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.btn[aria-disabled=true]{background:#d9d5c9;color:#6b6f66;pointer-events:none;border:0}
+.hero{background:var(--dark);color:var(--cream);padding:clamp(48px,9vw,110px) 0}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.lead{font-size:1.15rem;color:#c9cdc2;max-width:52ch}.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.ht{animation:in .8s both}.bw{animation:in .8s .2s both}@keyframes in{from{opacity:0;transform:translateY(18px)}}
+.bw{background:var(--forest);border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.45);overflow:hidden;transform:rotate(1.5deg)}
+.bb{display:flex;gap:6px;align-items:center;padding:10px 14px;background:#0d1812}.bb i{width:10px;height:10px;border-radius:50%;background:var(--muted)}.bb span{margin-left:12px;font-size:.75rem;color:var(--muted)}
+.bd{display:flex;height:250px}.sd{width:70px;background:#12291f}.mn{flex:1;padding:18px}
+.mn b{display:block;height:14px;width:45%;background:var(--cream);border-radius:4px;margin-bottom:16px}
+.rw{display:flex;gap:10px;margin-bottom:14px}.rw u{flex:1;height:48px;background:#21493a;border-radius:8px}.rw u:first-child{background:var(--orange)}
+.ch{height:90px;border-radius:8px;background:linear-gradient(160deg,#21493a,#183629)}
+.sec{padding:clamp(56px,8vw,100px) 0}.alt{background:var(--cream)}.dk{background:var(--dark);color:var(--cream)}
+.sub{color:var(--muted);max-width:60ch;margin:0 0 36px}
+.grid{display:grid;gap:20px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border:1px solid #e6e2d6;border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.card h3,.card p{margin:0}.card p{color:#4c564f}.card ul{margin:0;padding-left:18px;color:#4c564f;font-size:.93rem}.card>.btn{margin-top:auto;align-self:flex-start}
+.ico{width:42px;height:42px;border-radius:50%;background:var(--forest);color:var(--cream);display:grid;place-items:center;font:700 1.1rem var(--serif)}
+.dk .card{background:#17261e;border-color:#24382d;color:var(--cream)}.dk .card p{color:#b9beb2}
+.th{height:170px;border-radius:12px;display:grid;place-items:center;font:700 2.4rem var(--serif);color:var(--cream);background:linear-gradient(135deg,var(--forest),#0d1812);overflow:hidden}
+.th img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.card:hover .th img{transform:scale(1.05)}
+.badge,.chips span{display:inline-block;font-size:.78rem;padding:3px 12px;border-radius:999px;border:1px solid var(--orange);color:var(--orange)!important;width:fit-content}
+.chips{display:flex;gap:6px;flex-wrap:wrap}.chips span{border-color:#3a5446;color:#b9beb2!important}
+.card .acts{margin-top:8px}
+.flt{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.flt button{background:none;border:1px solid #3a5446;color:var(--cream);padding:9px 18px;border-radius:999px;cursor:pointer;min-height:44px;font:inherit}
+.flt button[aria-pressed=true]{background:var(--orange);border-color:var(--orange)}
+.about{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:center}
+.av{aspect-ratio:1;border-radius:24px 80px 24px 80px;background:var(--forest);color:#9fb3a7;display:grid;place-items:center;text-align:center}
+.pills{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0}.pills li{background:var(--forest);color:var(--cream);padding:6px 16px;border-radius:999px;font-size:.88rem}
+.steps{list-style:none;counter-reset:s;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.steps li{counter-increment:s;border-top:3px solid var(--orange);padding-top:14px}
+.steps li::before{content:counter(s,decimal-leading-zero);font:700 2rem var(--serif);color:var(--orange);display:block}.steps p{margin:0;color:#4c564f}
+dl{margin:0}dt{font-weight:700;margin-top:8px}dd{margin:0;color:#4c564f;font-size:.92rem}
+details{border-bottom:1px solid #d8d3c4}summary{cursor:pointer;padding:18px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px;min-height:44px}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";color:var(--orange);font-size:1.4rem;transition:transform .25s}details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 18px;color:#4c564f;animation:in .3s}
+form{display:grid;gap:16px}label{display:grid;gap:6px;font-weight:500}
+input,textarea{font:inherit;padding:12px 14px;border-radius:10px;border:1px solid #3a5446;background:#17261e;color:var(--cream)}
+.msg{min-height:1.4em;margin:0}.msg.e{color:#ffb28a}.msg.ok{color:#9fd8b4}.hint{color:var(--muted);font-size:.85rem;margin:0}
+.ct{display:flex;gap:20px;flex-wrap:wrap;margin-top:32px}.ct a{color:var(--orange)}
+footer{background:#0a120d;color:var(--muted);padding:28px 0;font-size:.9rem}
+dialog{max-width:min(560px,92vw);border:0;border-radius:18px;padding:30px;background:var(--soft);color:var(--ink)}dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog .badge{margin:0 0 12px}dialog .chips{margin:12px 0}
+.x{position:absolute;top:8px;right:10px;width:44px;height:44px;border:0;background:none;font-size:1.8rem;cursor:pointer}
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}.js .rv.in{opacity:1;transform:none}
+@media(max-width:860px){
+.hg,.about,.g2,.g3{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.av{max-width:220px}.burger{display:flex}
+nav{position:absolute;top:64px;left:0;right:0;background:var(--dark);flex-direction:column;align-items:stretch;padding:12px 20px 24px;gap:4px;display:none}
+nav.open{display:flex}nav a{padding:12px 0!important}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}.acts .btn{flex:1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a href="#home" class="logo"><svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#183629"/><path d="M20 18h24v6H27v6h14v6H27v6h17v6H20z" fill="#F5F2EA"/><circle cx="48" cy="46" r="4" fill="#C77C4A"/></svg>ProjectESEMKA</a>
+<button class="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="nav"><i></i><i></i></button>
+<nav id="nav" aria-label="Navigasi utama"><a href="#home">Home</a><a href="#tentang">Tentang Saya</a><a href="#layanan">Layanan</a><a href="#portfolio">Portfolio</a><a href="#teknologi">Teknologi</a><a href="#proses">Proses Kerja</a><a href="#faq">FAQ</a><a href="#kontak">Kontak</a><a class="btn sm" data-wa="">Konsultasi Proyek</a></nav>
+</div></header>
+<main>
+<section id="home" class="hero"><div class="wrap hg">
+<div class="ht"><h1>Website Profesional, Dibangun dari Ide dan Kreativitas.</h1>
+<p class="lead">Saya membantu bisnis, UMKM, dan individu membangun kehadiran digital melalui website yang modern, responsif, dan sesuai kebutuhan.</p>
+<div class="acts"><a class="btn" href="#portfolio">Jelajahi Portfolio</a><a class="btn ghost" data-wa="">Konsultasi via WhatsApp</a></div></div>
+<div class="bw" aria-hidden="true"><div class="bb"><i></i><i></i><i></i><span>ajang23.vercel.app</span></div><div class="bd"><div class="sd"></div><div class="mn"><b></b><div class="rw"><u></u><u></u><u></u></div><div class="ch"></div></div></div></div>
+</div></section>
+
+<section id="tentang" class="sec alt"><div class="wrap about rv">
+<div class="av" role="img" aria-label="Foto profil placeholder">Foto Profil<br>(ganti di index.html)</div>
+<div><h2>Di Balik ProjectESEMKA.</h2>
+<p>ProjectESEMKA bukan dibangun oleh sebuah tim besar. Ini adalah perjalanan seorang siswa SMK yang belajar dan mengembangkan website secara mandiri.</p>
+<p>Saya mengerjakan seluruh proses pengembangan sendiri, mulai dari memahami kebutuhan, merancang antarmuka, menulis kode, mengintegrasikan database, melakukan pengujian, hingga melakukan deployment.</p>
+<p>Saya masih terus belajar. Setiap proyek menjadi kesempatan untuk memperbaiki kemampuan dan menghasilkan karya yang lebih baik.</p>
+<ul class="pills"><li>Independent Developer</li><li>Fokus Web Development</li><li>Jujur soal proses</li><li>Terus belajar dan berkarya</li></ul></div>
+</div></section>
+
+<section id="layanan" class="sec"><div class="wrap rv"><h2>Layanan</h2><p class="sub">Pilih yang paling dekat dengan kebutuhan Anda, atau ceritakan kebutuhan khusus Anda.</p><div class="grid g3" id="services"></div></div></section>
+<section id="portfolio" class="sec dk"><div class="wrap rv"><h2>Portfolio</h2><p class="sub">Setiap proyek diberi label status agar jelas mana yang sudah online dan mana yang masih dikembangkan.</p><div class="flt" id="filters" role="group" aria-label="Filter portfolio"></div><p class="hint" id="pState" role="status"></p><div class="grid g2" id="projects"></div></div></section>
+<section id="teknologi" class="sec"><div class="wrap rv"><h2>Teknologi</h2><p class="sub" id="techNote"></p><div class="grid g2" id="tech"></div></div></section>
+<section id="proses" class="sec alt"><div class="wrap rv"><h2>Proses Kerja</h2><ol class="steps" id="steps"></ol></div></section>
+<section id="paket" class="sec"><div class="wrap rv"><h2>Paket Layanan</h2><p class="sub" id="priceNote"></p><div class="grid g3" id="packages"></div></div></section>
+<section id="faq" class="sec alt"><div class="wrap narrow rv"><h2>FAQ</h2><div id="faqList"></div></div></section>
+<section id="kontak" class="sec dk"><div class="wrap narrow rv"><h2>Punya Ide? Mari Kita Wujudkan Bersama.</h2><p class="sub">Pemesanan website dilakukan melalui WhatsApp.</p>
+<form id="form" novalidate><label>Nama<input name="nama" autocomplete="name" required maxlength="80"></label>
+<label>Kebutuhan proyek<textarea name="pesan" rows="4" required maxlength="600"></textarea></label>
+<p class="msg" id="fMsg" role="alert"></p><button class="btn" id="fBtn" type="submit">Kirim lewat WhatsApp</button>
+<p class="hint">Tombol ini membuka WhatsApp dengan pesan terisi. Data hanya tersimpan di database jika Supabase diaktifkan di CONFIG.</p></form>
+<p class="ct"><a data-wa="">WhatsApp</a><a id="mail"></a><a id="ig" target="_blank" rel="noopener"></a></p></div></section>
+</main>
+<footer><div class="wrap">© <span id="yr"></span> ProjectESEMKA — proyek personal, dikerjakan sendiri.</div></footer>
+<dialog id="modal" aria-labelledby="mT"><button class="x" aria-label="Tutup">×</button><h3 id="mT"></h3><p class="badge" id="mS"></p><p id="mD"></p><p class="chips" id="mTech"></p><div class="acts" id="mA"></div></dialog>
+
+<script>
+/* ============================================================
+   CONFIG — SEMUA TEKS & DATA YANG SERING DIEDIT ADA DI SINI
+   Nomor WA, email, IG, layanan, paket, FAQ, portfolio, dll.
+   ============================================================ */
+var CONFIG={
+  whatsapp:"6281234567890",        // GANTI: format 62xxxxxxxxxx tanpa + / spasi
+  email:"email@contoh.com",        // GANTI (placeholder)
+  instagram:"projectesemka",       // GANTI (placeholder)
+  msgGeneral:"Halo ProjectESEMKA, saya tertarik membuat website. Saya ingin berkonsultasi mengenai kebutuhan proyek saya.",
+  priceNote:"Harga menyesuaikan kebutuhan dan kompleksitas proyek",
+  // Supabase OPSIONAL. Kosongkan untuk mode statis penuh. Hanya isi anon/publishable key, JANGAN service_role.
+  SUPABASE_URL:"", SUPABASE_ANON_KEY:"",
+  services:[
+    ["Company Profile Website","Profil perusahaan yang rapi dan kredibel.",["Halaman profil","Galeri","Kontak"]],
+    ["Website UMKM","Etalase digital untuk usaha kecil.",["Katalog produk","Tombol WhatsApp","Peta lokasi"]],
+    ["Website Cafe & Restaurant","Menu, suasana, dan lokasi dalam satu halaman.",["Katalog menu","Jam buka","Kontak"]],
+    ["Landing Page","Satu halaman fokus untuk satu tujuan.",["Copy terstruktur","CTA jelas","Cepat dimuat"]],
+    ["Online Store / Product Catalog","Katalog produk dengan pemesanan via WhatsApp.",["Daftar produk","Filter","Pesan via WA"]],
+    ["Web Application","Aplikasi berbasis web sesuai alur kerja Anda.",["Login pengguna","Database","Fitur custom"]],
+    ["Dashboard Admin","Panel untuk mengelola data dan laporan.",["Manajemen data","Ringkasan","Hak akses"]],
+    ["Sistem Absensi","Pencatatan kehadiran dan jadwal kerja.",["Data karyawan","Jadwal bulanan","Rekap"]],
+    ["Sistem Inventaris","Stok barang masuk, keluar, dan supplier.",["Stok","Supplier","Ekspor Excel"]],
+    ["Custom Website","Kebutuhan khusus? Kita diskusikan.",["Konsultasi","Fitur sesuai kebutuhan"]]],
+  packages:[
+    {name:"Starter Website",desc:"Website sederhana untuk mulai tampil online.",target:"Individu dan usaha yang baru mulai.",features:["Satu halaman / landing page","Responsif di HP","Tombol WhatsApp","Deploy ke Vercel"]},
+    {name:"Business Website",desc:"Website multi-bagian untuk bisnis yang berkembang.",target:"UMKM, cafe, dan company profile.",features:["Beberapa bagian/halaman","Katalog produk atau menu","SEO dasar","Bantuan domain sendiri"]},
+    {name:"Custom Web Application",desc:"Aplikasi web dengan database dan login.",target:"Bisnis dengan alur kerja khusus.",features:["Autentikasi pengguna","Database (mis. Supabase)","Dashboard admin","Lingkup sesuai konsultasi"]}],
+  tech:[
+    ["Frontend",[["HTML5","Struktur halaman"],["CSS3","Tampilan dan animasi"],["JavaScript","Interaksi dan logika"],["Responsive Design","Nyaman di semua layar"]]],
+    ["Backend & Database",[["Supabase","Platform backend"],["PostgreSQL","Database relasional"],["Supabase Authentication","Login pengguna"],["Supabase Storage","Penyimpanan file"],["Row Level Security","Keamanan akses data"],["Supabase RPC","Fungsi di sisi database"]]],
+    ["Deployment & Hosting",[["Vercel","Hosting website"],["GitHub","Version control"],["Custom Domain","Alamat web sendiri"]]],
+    ["Tools & Libraries",[["SheetJS","Ekspor/impor Excel"],["Google Fonts","Tipografi web"],["REST API","Komunikasi data"],["Browser DevTools","Debugging dan pengujian"]]]],
+  techNote:"Tidak semua proyek menggunakan seluruh teknologi ini. Stack disesuaikan dengan kebutuhan proyek.",
+  steps:[["Konsultasi","Memahami ide, tujuan, kebutuhan, dan fitur website."],["Perencanaan & Desain","Membuat struktur halaman, desain, dan pengalaman pengguna."],["Development & Testing","Mengembangkan fitur, integrasi backend, dan menguji website."],["Launching","Melakukan deployment dan memastikan website dapat diakses."]],
+  faq:[
+    ["Apakah ProjectESEMKA merupakan perusahaan?","Bukan. ProjectESEMKA adalah proyek personal yang dikerjakan oleh seorang siswa SMK, tanpa tim dan bukan perusahaan."],
+    ["Apakah semua website dibuat sendiri?","Ya. Desain, kode, integrasi database, pengujian, sampai deployment saya kerjakan sendiri."],
+    ["Apakah website bisa diakses melalui HP?","Ya. Semua website dibuat responsif agar nyaman di HP, tablet, dan desktop."],
+    ["Apakah website bisa menggunakan database?","Bisa, jika proyek membutuhkannya. Saya biasa memakai Supabase. Website statis tidak memerlukan database."],
+    ["Apakah bisa menggunakan domain sendiri?","Bisa. Domain dapat dihubungkan ke hosting; domain dibeli oleh Anda sendiri."],
+    ["Apakah bisa dibuatkan website toko online?","Saya bisa membuat katalog produk dengan pemesanan via WhatsApp. Pembayaran otomatis belum tersedia."],
+    ["Apakah bisa dibuatkan dashboard admin?","Bisa. Lingkup fitur didiskusikan lebih dulu agar sesuai kebutuhan."],
+    ["Bagaimana proses pemesanan?","Hubungi saya via WhatsApp, ceritakan kebutuhan, lalu kita bahas lingkup dan estimasi."],
+    ["Bagaimana sistem pembayaran?","Metode dan termin pembayaran disepakati bersama saat konsultasi. Tidak ada pembayaran otomatis di website ini."],
+    ["Apakah tersedia layanan revisi dan maintenance?","Revisi dan perawatan dapat didiskusikan per proyek. Ketentuannya saya sampaikan sebelum pekerjaan dimulai."]],
+  // PORTFOLIO — status: Live | Demo | Development | Concept. url kosong = tombol "Segera Hadir".
+  projects:[
+    {name:"Hadirku — E-Attendance",category:"Web Application",status:"Live",url:"https://ajang23.vercel.app/",desc:"Sistem absensi karyawan berbasis website dengan pengelolaan karyawan, jadwal kerja bulanan, dashboard admin, dan pencatatan kehadiran.",tech:["HTML","CSS","JavaScript","Supabase","Vercel"],image:""},
+    {name:"Ju5tFun Cloud",category:"Web Application",status:"Development",url:"",desc:"Konsep aplikasi penyimpanan file berbasis cloud dengan autentikasi pengguna dan pengelolaan file.",tech:["HTML","CSS","JavaScript","Supabase"],image:""},
+    {name:"Inventra Pro",category:"Web Application",status:"Development",url:"",desc:"Aplikasi pengelolaan inventaris untuk mencatat barang masuk, barang keluar, supplier, stok, dan aktivitas inventaris.",tech:["HTML","CSS","JavaScript","Supabase","SheetJS"],image:""},
+    {name:"ProjectESEMKA Cafe Demo",category:"Website Cafe",status:"Demo",url:"" /* ISI URL demo */,desc:"Website cafe modern dengan katalog menu, profil cafe, informasi lokasi, dan kontak WhatsApp.",tech:["HTML","CSS","JavaScript"],image:""}]
+};
+
+(function(){
+"use strict";
+document.documentElement.classList.add("js");
+var C=CONFIG,$=function(s){return document.querySelector(s)};
+function el(t,c,x,p){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;if(p)p.appendChild(e);return e}
+
+/* WhatsApp: validasi nomor + encode pesan. Tanpa nomor valid, tombol dinonaktifkan. */
+var okNum=/^[1-9]\d{7,14}$/.test(String(C.whatsapp||""));
+function wa(m){return okNum?"https://wa.me/"+C.whatsapp+"?text="+encodeURIComponent(m):""}
+function bind(a,m){var u=wa(m);if(u){a.href=u;a.target="_blank";a.rel="noopener"}else{a.removeAttribute("href");a.setAttribute("aria-disabled","true");a.title="Nomor WhatsApp belum valid di CONFIG"}}
+document.querySelectorAll("[data-wa]").forEach(function(a){bind(a,C.msgGeneral)});
+
+C.services.forEach(function(s){var c=el("article","card",null,$("#services"));el("div","ico",s[0].charAt(0),c);el("h3",null,s[0],c);el("p",null,s[1],c);
+ var u=el("ul",null,null,c);s[2].forEach(function(f){el("li",null,f,u)});bind(el("a","btn sm","Konsultasi",c),"Halo ProjectESEMKA, saya tertarik dengan layanan "+s[0]+". Bisa kita diskusikan?")});
+
+/* Portfolio */
+var P=C.projects,cat="Semua",modal=$("#modal");
+function act(p,box){if(p.url){var a=el("a","btn sm","Lihat Website",box);a.href=p.url;a.target="_blank";a.rel="noopener"}else el("a","btn sm","Segera Hadir",box).setAttribute("aria-disabled","true")}
+function draw(){
+ var box=$("#projects");box.textContent="";var list=P.filter(function(p){return cat==="Semua"||p.category===cat});
+ $("#pState").textContent=list.length?"":"Belum ada proyek di kategori ini.";
+ list.forEach(function(p){var c=el("article","card",null,box),t=el("div","th",null,c);
+  if(p.image){var im=el("img");im.src=p.image;im.alt="Tampilan "+p.name;im.loading="lazy";im.width=520;im.height=170;t.appendChild(im)}else t.textContent=p.name.charAt(0);
+  el("p","badge",p.status+" · "+p.category,c);el("h3",null,p.name,c);el("p",null,p.desc,c);
+  var ch=el("p","chips",null,c);p.tech.forEach(function(x){el("span",null,x,ch)});
+  var a=el("div","acts",null,c);act(p,a);var d=el("button","btn sm ghost","Detail Proyek",a);d.type="button";d.onclick=function(){open(p)}})}
+function filters(){var f=$("#filters");f.textContent="";["Semua"].concat(P.map(function(p){return p.category}).filter(function(v,i,a){return a.indexOf(v)===i})).forEach(function(k){
+ var b=el("button",null,k,f);b.type="button";b.setAttribute("aria-pressed",k===cat);b.onclick=function(){cat=k;filters();draw()}})}
+function open(p){$("#mT").textContent=p.name;$("#mS").textContent=p.status+" · "+p.category;$("#mD").textContent=p.desc;
+ var t=$("#mTech");t.textContent="";p.tech.forEach(function(x){el("span",null,x,t)});var a=$("#mA");a.textContent="";act(p,a);
+ bind(el("a","btn sm ghost","Buat website seperti ini",a),"Halo ProjectESEMKA, saya tertarik membuat website seperti "+p.name+". Bisa kita diskusikan?");modal.showModal()}
+modal.querySelector(".x").onclick=function(){modal.close()};modal.onclick=function(e){if(e.target===modal)modal.close()};
+filters();draw();
+
+/* Opsional: ambil portfolio dari Supabase (tabel projects, lihat schema.sql). Gagal = tetap pakai data CONFIG. */
+var SB=C.SUPABASE_URL&&C.SUPABASE_ANON_KEY&&/^https:\/\//.test(C.SUPABASE_URL);
+function sbH(){return{apikey:C.SUPABASE_ANON_KEY,Authorization:"Bearer "+C.SUPABASE_ANON_KEY,"Content-Type":"application/json"}}
+if(SB){$("#pState").textContent="Memuat portfolio…";
+ fetch(C.SUPABASE_URL+"/rest/v1/projects?is_published=eq.true&order=sort_order.asc&select=*",{headers:sbH()}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(rows){
+  if(rows.length){P=rows.map(function(r){return{name:r.name,category:r.category||"Lainnya",status:r.status,url:r.url||"",desc:r.description||"",tech:r.tech||[],image:r.image_url||""}});cat="Semua";filters()}draw()})
+ .catch(function(){draw();$("#pState").textContent="Portfolio dari database tidak dapat dimuat; menampilkan data bawaan."})}
+
+/* Teknologi, proses, paket, FAQ */
+$("#techNote").textContent=C.techNote;$("#priceNote").textContent=C.priceNote;
+C.tech.forEach(function(g){var c=el("div","card",null,$("#tech"));el("h3",null,g[0],c);var d=el("dl",null,null,c);g[1].forEach(function(i){el("dt",null,i[0],d);el("dd",null,i[1],d)})});
+C.steps.forEach(function(s){var l=el("li",null,null,$("#steps"));el("h3",null,s[0],l);el("p",null,s[1],l)});
+C.packages.forEach(function(p){var c=el("article","card",null,$("#packages"));el("h3",null,p.name,c);el("p",null,p.desc,c);el("p","badge","Untuk: "+p.target,c);
+ var u=el("ul",null,null,c);p.features.forEach(function(f){el("li",null,f,u)});bind(el("a","btn","Konsultasi Harga",c),"Halo ProjectESEMKA, saya tertarik dengan paket "+p.name+". Bisa saya mendapatkan informasi lebih lanjut?")});
+C.faq.forEach(function(f){var d=el("details",null,null,$("#faqList"));el("summary",null,f[0],d);el("p",null,f[1],d)});
+
+/* Kontak + form */
+$("#mail").textContent=C.email;$("#mail").href="mailto:"+C.email;$("#ig").textContent="@"+C.instagram;$("#ig").href="https://instagram.com/"+encodeURIComponent(C.instagram);$("#yr").textContent=new Date().getFullYear();
+$("#form").addEventListener("submit",function(e){e.preventDefault();var f=e.target,n=f.nama.value.trim(),m=f.pesan.value.trim(),out=$("#fMsg"),b=$("#fBtn");out.className="msg e";
+ if(n.length<2||n.length>80||m.length<10||m.length>600){out.textContent="Isi nama (2–80 karakter) dan kebutuhan proyek (10–600 karakter).";return}
+ var u=wa("Halo ProjectESEMKA, saya "+n+". "+m);if(!u){out.textContent="Nomor WhatsApp belum valid di CONFIG.";return}
+ function go(note){out.className="msg ok";out.textContent=note;window.open(u,"_blank","noopener")}
+ if(!SB){go("Membuka WhatsApp…");return}
+ b.disabled=true;out.className="msg";out.textContent="Menyimpan…";
+ fetch(C.SUPABASE_URL+"/rest/v1/inquiries",{method:"POST",headers:Object.assign(sbH(),{Prefer:"return=minimal"}),body:JSON.stringify({name:n,message:m})})
+ .then(function(r){if(!r.ok)throw 0;go("Pesan tersimpan. Membuka WhatsApp…")}).catch(function(){out.className="msg e";out.textContent="Gagal menyimpan ke database. Kirim langsung lewat WhatsApp.";})
+ .then(function(){b.disabled=false})});
+
+/* Navigasi: menu mobile, indikator section aktif, scroll reveal */
+var nav=$("#nav"),bg=$(".burger");function close(){nav.classList.remove("open");bg.setAttribute("aria-expanded","false")}
+bg.onclick=function(){bg.setAttribute("aria-expanded",nav.classList.toggle("open"))};nav.onclick=function(e){if(e.target.tagName==="A")close()};document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+var ls=[].slice.call(nav.querySelectorAll("a[href^='#']"));
+if("IntersectionObserver" in window){
+ var o=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)ls.forEach(function(l){l.classList.toggle("on",l.getAttribute("href")==="#"+x.target.id)})})},{rootMargin:"-45% 0px -50% 0px"});
+ ls.forEach(function(l){var s=document.querySelector(l.getAttribute("href"));if(s)o.observe(s)});
+ var r=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");r.unobserve(x.target)}})},{threshold:.08});
+ document.querySelectorAll(".rv").forEach(function(x){r.observe(x)})
+}else document.querySelectorAll(".rv").forEach(function(x){x.classList.add("in")});
+})();
+</script>
+</body>
+</html>
